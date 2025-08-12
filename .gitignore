@@ -1,0 +1,11 @@
+*.csproj
+*.sln
+Library/
+Temp/
+Build/
+obj/
+
+.fake
+
+*.mp4
+*.mp3
