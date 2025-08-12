@@ -9,6 +9,16 @@ the motivation of i created this game is to make alternative game like hatsune m
 and also to learn csharp. 
 
 
+## Download
+
+you can run this game on windows with x86 or x86_64
+
+i made it to have more compatible with any version windows.
+
+- [Full version (10 songs - 187mb)](https://github.com/nursyah21/hatsune-miku/releases/tag/1.0.0)
+- [Lite version (3 songs - 68mb)](https://github.com/nursyah21/hatsune-miku/releases/tag/1.0.0-lite)
+
+
 ## Screenshot
 ![image](./ssEditor.png)
 
@@ -22,11 +32,20 @@ press left or right keyboard to change music. this layout inspired by cytus.
 
 and thats it.
 
-## Download
+## Clone Repository
 
-you can run this game on windows with x86 or x86_64
+to clone this repository, you need to use git lfs 
 
-i made it to have more compatible with any version windows.
+because i use git lfs to store large files like mp3 or mp4
 
-- Full version (10 songs - 187mb)
-- Lite version (3 songs - 68mb)
+```bash
+git lfs install
+```
+
+```bash
+git clone https://github.com/nursyah21/hatsune-miku.git
+cd hatsune-miku
+git lfs pull
+```
+
+for better compability, i recommend you to use same version unity which is 5.6.7f1
