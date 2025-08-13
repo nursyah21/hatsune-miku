@@ -11,12 +11,8 @@ and also to learn csharp.
 
 ## Download
 
-you can run this game on windows with x86 or x86_64
-
-i made it to have more compatible with any version windows.
-
-- [Full version (10 songs - 187mb)](https://github.com/nursyah21/hatsune-miku/releases/tag/1.0.0)
-- [Lite version (3 songs - 68mb)](https://github.com/nursyah21/hatsune-miku/releases/tag/1.0.0-lite)
+- [Full version](https://github.com/nursyah21/hatsune-miku/releases/tag/latest) (all songs)
+- [Lite version](https://github.com/nursyah21/hatsune-miku/releases/tag/latest-lite) (only 3 songs)
 
 
 ## Screenshot

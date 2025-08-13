@@ -48,6 +48,8 @@ public class Main : MonoBehaviour
 
 	private List<int> listScore;
 
+	public Slider slider;
+
 	#endregion
 
 	#region Main
@@ -112,6 +114,9 @@ public class Main : MonoBehaviour
 		if (timeCombination) {
 			PlayCombination ();	
 		}
+		if (isMainMenu) {
+			slider.gameObject.SetActive(false);
+		}
 	}
 
 	#endregion
@@ -174,6 +179,7 @@ public class Main : MonoBehaviour
 						score += firstScore;
 					}
 					score += incScore;
+					button [currCombination].color = new Color (1f, 1f, 1f, .4f);
 					currCombination++;
 
 					if (currCombination >= 7)
@@ -347,6 +353,7 @@ public class Main : MonoBehaviour
 		foreach (var btn in button) {
 			btn.color = new Color (1f, 1f, 1f, 0f);
 		}
+		slider.gameObject.SetActive(false);
 		timeCombination = false;
 	}
 
@@ -358,7 +365,25 @@ public class Main : MonoBehaviour
 			button [i].texture = buttonTexture [rand];
 			button [i].color = new Color (1f, 1f, 1f, 1f);
 		}
+		slider.value = 1;
+		slider.gameObject.SetActive(true);
+		StartCoroutine (AnimateSlider());
 		timeCombination = true;
+	}
+
+	IEnumerator AnimateSlider()
+	{
+		float elapsed = 0f;
+
+		while (elapsed < 3)
+		{
+			elapsed += Time.deltaTime;
+			float t = Mathf.Clamp01(elapsed / 3);
+			slider.value = Mathf.Lerp(1, 0, t);
+			yield return null;
+		}
+
+		slider.value = 0;
 	}
 
 	void ChangedTitle ()
